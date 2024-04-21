@@ -1,0 +1,148 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+header
+{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    color: white;
+    background-color: black;
+    padding: 0.5vw;
+}
+header > a > img
+{
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 15px;
+    transition: all ease 0.3S;
+}
+header > a
+{
+    transition: all ease 0.3S;
+    text-decoration: none;
+    color: inherit;
+}
+header > a:hover
+{
+    color: crimson;
+}
+header > a > img:hover
+{
+    background-color: crimson;
+}
+main
+{
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+
+}
+footer > a
+{
+    transition: all ease 0.5s;
+}
+footer > a:hover
+{
+    scale: 150%;
+}
+footer
+{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: black;
+    padding: 1vw;
+    color: white;
+    align-items: center;
+    text-align: center;
+}
+.width100
+{
+    width: 100%;
+    margin-top: 1vw;
+}
+section
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1vw;
+}
+section > img
+{
+    height: 300px;
+    width: 300px;
+}
+section>div 
+{
+    width: 50%;
+}
+
+details[open] summary~* 
+{
+    animation: open .5s ease-in-out;
+}
+
+details[close] summary~* 
+{
+    animation: close .5s ease-in-out;
+}
+article
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 70%;
+}
+
+@keyframes open 
+{
+    0% 
+    {
+        opacity: 0;
+        margin-left: -20px
+    }
+
+    100% 
+    {
+        opacity: 1;
+        margin-left: 0px
+    }
+}
+
+@keyframes close 
+{
+    0% 
+    {
+        opacity: 1;
+        margin-left: 0px;
+    }
+
+    100% 
+    {
+        opacity: 0;
+        margin-left: -20px
+    }
+}
+footer
+{
+    margin-top: auto;
+}
+article > h1
+{
+    text-align: center;
+    font-size: 5rem;
+}
+

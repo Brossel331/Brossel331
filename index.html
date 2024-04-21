@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио Brossel331</title>
+    <link rel="stylesheet" href="assets/css/index.css">
+</head>
+
+<body>
+    <header>
+        <!-- Первое выпадающее меню -->
+        <div class="dropdown">
+            <a href="#">Website layout (Pure HTML&CSS)</a>
+            <div class="dropdown-content">
+                <!-- Содержимое меню -->
+                <a href="BlackAbyss/index.html">Black Abyss</a><br>
+                <a href="Yambler/index.html">Yambler</a><br>
+                <a href="Web-olymp/index.html">Fulgurator</a>
+            </div>
+        </div>
+        
+        <!-- Второе выпадающее меню -->
+        <div class="dropdown">
+            <a href="#">Dynamic websites</a>
+            <div class="dropdown-content">
+                <!-- Содержимое меню -->
+                <a href="#">In progress</a><br>
+                <a href="#">In progress</a><br>
+                <a href="#">In progress</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div>
+                <h1>Heya, i'm Brossel331</h1>
+                <h2>Imma show my WEB works</h2>
+            </div>
+            <video id="myVideo" autoplay>
+                <source src="assets/img/video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+        <section class="hidden">
+            <img src="assets/img/photo1.png">
+            <img src="assets/img/photo2.png">
+            <img src="assets/img/photo3.png">
+            <img src="assets/img/photo4.png">
+        </section>
+    </main>
+    <footer>
+        <a href="https://vk.com/ect_official">
+            <img src="assets/img/icons8-vk-circled-48.png">
+        </a>
+        <a href="#">
+            <img src="assets/img/icons8-telegram-app-48.png">
+        </a>
+        <a href="#">
+            <img src="assets/img/icons8-youtube-48.png">
+        </a>
+
+    </footer>
+
+    <script>
+        const element = document.querySelector('.hidden');
+        const scrollMessage = document.getElementById('scrollMessage');
+
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    element.classList.add('show');
+                    
+                } else {
+                    element.classList.remove('show');
+                }
+            });
+        }, options);
+
+        observer.observe(element);
+
+        const video = document.getElementById('myVideo');
+        video.addEventListener('ended', function() {
+            video.remove();
+        });
+    </script>
+</body>
+
+</html>
+
+
